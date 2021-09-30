@@ -1,0 +1,26 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--TODO: make these styles more neat -->
+    <style name="MyTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="color">@color/colorPrimaryDark</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:background">@color/colorSecondary</item>
+    </style>
+
+    <style name="MyExplanation" parent="TextAppearance.AppCompat.Body1">
+        <item name="background">@color/colorPrimary</item>
+        <item name="color" >@color/colorPrimaryDark</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+</resources>

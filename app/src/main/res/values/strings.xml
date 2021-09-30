@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Work MEMO</string>
+    <string name="app_name_Japanese">お仕事メモ帳</string>
+
+    <!-- button templates -->
+    <string name="next">確定</string>
+    <string name="back">戻る</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- input categories: used in Input and Confirm activities -->
+    <string name="date">日付</string>
+    <string name="workContext">業務内容</string>
+    <string name="memo">メモ</string>
+
+    <!-- ListActivity -->
+    <string name="listTitle">記録</string>
+
+    <!-- used in ConfirmActivity -->
+    <string name="confirmTitle">確認画面</string>
+    <string name="confirmExplanation">確認出来たら「確定」を押してください。</string>
+
+    <!-- used in Input Activity -->  <!-- &#x0A; は改行エスケープ-->
+    <string name="inputTitle">入力画面</string>
+    <string name="inputExplanation">入力してください。</string>
+    <string name="InputErrorMessage">文字列“###”は&#x0A;入力できません</string>
+    <string name="dateErrorMessage">今日以降の日付は入力できません</string>
+
+    <!-- File -->
+    <string name="fileDoesNotExist">file does not exist. </string>
+    <string name="FileExists">file exists.</string>
+    <string name="FileCouldNotBeDeleted">File couldn\'t be deleted.</string>
+</resources>

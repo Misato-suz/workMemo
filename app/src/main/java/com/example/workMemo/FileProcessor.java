@@ -32,7 +32,7 @@ public class FileProcessor {
         File file = context.getFileStreamPath(fileName);
         if (file.exists()){
             System.out.println("Checking file: " + fileName + " -> " + context.getString(R.string.FileExists)); //activityクラスを継承していないので"context."が必要になる。
-            //もしcontext.が無いとint型で出力される。
+            //context.が無いとint型で出力される。
             return true;
         } else {
             System.out.println("Checking file: " + fileName + " -> " + context.getString(R.string.fileDoesNotExist));

@@ -24,6 +24,7 @@ public class ArchiveActivity extends AppCompatActivity implements View.OnClickLi
         listView = findViewById(R.id.listViewArchive);
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        // アプリ固有ファイルのリストを取得してarrayAdapterにセット
         arrayAdapter.addAll(fileList());
 
         listView.setAdapter(arrayAdapter);

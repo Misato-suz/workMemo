@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Date;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -21,13 +20,11 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
 
     private Button buttonBack;
     private Button buttonNext;
-    private ArrayList<String> arrayList;
 
     private Date date = new Date();
-    private String dateString;
     private String work;
     private String memo;
-    private Calendar c = Calendar.getInstance();  //calendar クラスは必ず初期化！！！！！
+    private final Calendar c = Calendar.getInstance();  //calendar クラスは必ず初期化！！！！！
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -39,15 +36,14 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         assert bundle != null;
-        arrayList = bundle.getStringArrayList("work");
 
-        assert arrayList != null;
-        dateString = String.valueOf(bundle.getString("date"));
-        date = java.sql.Date.valueOf(dateString);
+        String dateString = String.valueOf(bundle.getString("date"));//simpleDateFormat: YYYY-MM-dd
+        date = java.sql.Date.valueOf(dateString);//Date型に変換
+        assert date != null;
+        c.setTime(date);//setTextするときにstring.formatできるように（多分）
         work = String.valueOf(bundle.getString("workType"));
         memo = String.valueOf(bundle.getString("memo"));
-        assert date != null;
-        c.setTime(date);
+
 
         TextView textViewDate = findViewById(R.id.textViewDateConfirm);
         TextView textViewWork = findViewById(R.id.textViewWorkConfirm);
@@ -59,8 +55,9 @@ public class ConfirmActivity extends AppCompatActivity implements View.OnClickLi
         buttonBack.setOnClickListener(this);
 
         //textViewに取得した文字を入力
+        // ↓2021年10月25日
         textViewDate.setText(String.format("%d年%d月%d日", c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1, c.get(Calendar.DAY_OF_MONTH)));
-        textViewDate.setText(String.valueOf(date));
+        //textViewDate.setText(String.valueOf(date)); -> 2021-10-25
         textViewWork.setText(work);
         textViewMemo.setText(memo);
     }

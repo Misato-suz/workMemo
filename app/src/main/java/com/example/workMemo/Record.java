@@ -34,8 +34,7 @@ public class Record {
         return memo;
     }
 
-    public String appendMemo(String newString){
+    public void appendMemo(String newString){
         this.memo = this.memo + "\n" + newString;
-        return this.memo;
     }
 }

@@ -113,10 +113,9 @@ checkError
             //その日以降の日付の場合、不当なので次へ進めないようにする
             Toast.makeText(this,"今日以降の日付は入力できません。", Toast.LENGTH_SHORT).show();
             return false;
-        } else if (memo.contains("###")) {
-            Toast.makeText(this, "###は入力しないでください", Toast.LENGTH_SHORT).show();
-            return false;
-        }else {return true;}
+        } else {
+            return true;
+        }
     }
 
     //DatePickerFragment に日付がセットされたときにtextViewに取得した日付を書く
